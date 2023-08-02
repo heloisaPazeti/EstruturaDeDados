@@ -3,8 +3,8 @@
 ### Contém
 
 - Listas Encadeadas Simples
-- Listas Encadeadas Circulares
 - Listas Duplamente Encadeadas
+- Listas Encadeadas Circulares
 - Listas Duplamente Circulares Encadeadas
 
 ##
