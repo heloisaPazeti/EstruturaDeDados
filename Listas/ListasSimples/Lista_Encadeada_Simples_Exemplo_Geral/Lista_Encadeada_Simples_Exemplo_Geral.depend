@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1691172693 source:c:\meusprojetos\github_repositories\estruturadedados\listas\listassimples\lista_encadeada_simples_exemplo_geral\main.c
+	"LinkedList.h"
+
+1691160076 c:\meusprojetos\github_repositories\estruturadedados\listas\listassimples\lista_encadeada_simples_exemplo_geral\linkedlist.h
+	<stdbool.h>
+
+1691160694 source:c:\meusprojetos\github_repositories\estruturadedados\listas\listassimples\lista_encadeada_simples_exemplo_geral\linkedlist.c
+	"LinkedList.h"
+	<stdlib.h>
+	<stdio.h>
+
