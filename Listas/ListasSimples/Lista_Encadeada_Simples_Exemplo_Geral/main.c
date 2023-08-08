@@ -24,5 +24,7 @@ int main()
 
     LinkedList_Print(L);
 
+    LinkedList_Destroy(L);
+
     return 0;
 }

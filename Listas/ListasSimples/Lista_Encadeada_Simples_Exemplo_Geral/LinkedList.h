@@ -25,6 +25,7 @@ void LinkedList_AddLast(LinkedList *L, int val);
 ///////////////////////////////////////// DEFININDO MÉTODO(S) DE REMOÇÃO
 
 void LinkedList_Remove(LinkedList *L, int val);
+void LinkedList_Destroy(LinkedList **L);
 
 ///////////////////////////////////////// DEFININDO OUTRO(S) MÉTODO(S)
 

@@ -108,6 +108,26 @@ void LinkedList_Remove(LinkedList *L, int val)
     }
 }
 
+void LinkedList_Destroy(LinkedList **L)
+{
+    LinkedList *L_ref = *L;
+
+
+    SNode *aux = NULL;
+    SNode *p = L_ref -> begin;
+
+    while(p != NULL)
+    {
+        aux = p;
+        p = p -> next;
+
+        free(aux);
+    }
+
+    free(L_ref);
+    *L = NULL;
+}
+
 ////////////////////////////// OUTRO(S) MÉTODO(S)
 
 void LinkedList_Print(LinkedList *L)
