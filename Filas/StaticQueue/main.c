@@ -26,5 +26,7 @@ int main()
     StaticQueue_Enqueue(Q, 3);
     StaticQueue_Enqueue(Q, 4);
     StaticQueue_Print(Q);
+
+    StaticQueue_Destroy(&Q);
     return 0;
 }

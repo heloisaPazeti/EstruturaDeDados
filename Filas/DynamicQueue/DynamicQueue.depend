@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1692393829 source:c:\meusprojetos\github_repositories\estruturadedados\filas\dynamicqueue\doub_list_queue.c
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	"Doub_List_Queue.h"
+
+1692393843 c:\meusprojetos\github_repositories\estruturadedados\filas\dynamicqueue\doub_list_queue.h
+
+1692394052 source:c:\meusprojetos\github_repositories\estruturadedados\filas\dynamicqueue\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Dynamic_Queue.h"
+
+1692393853 c:\meusprojetos\github_repositories\estruturadedados\filas\dynamicqueue\dynamic_queue.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1692393880 source:c:\meusprojetos\github_repositories\estruturadedados\filas\dynamicqueue\dynamic_queue.c
+	"Dynamic_Queue.h"
+	"Doub_List_Queue.h"
+
