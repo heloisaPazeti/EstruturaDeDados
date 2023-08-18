@@ -11,6 +11,7 @@ void List_AddFirst(List *L, int val);
 void List_AddLast(List *L, int val);
 
 void List_Print(List *L);
+int List_GetSize(List *L);
 
 void List_Remove(List *L, int val);
 
