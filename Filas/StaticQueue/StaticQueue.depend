@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1692393048 source:c:\meusprojetos\github_repositories\estruturadedados\filas\staticqueue\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Static_Queue.h"
+
+1692392723 c:\meusprojetos\github_repositories\estruturadedados\filas\staticqueue\static_queue.h
+	<stdbool.h>
+
+1692392892 source:c:\meusprojetos\github_repositories\estruturadedados\filas\staticqueue\static_queue.c
+	"Static_Queue.h"
+	<stdio.h>
+	<stdlib.h>
+
