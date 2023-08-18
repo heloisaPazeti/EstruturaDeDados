@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1692330563 source:c:\meusprojetos\github_repositories\estruturadedados\pilhas\dynamic_stack\main.c
+1692391458 source:c:\meusprojetos\github_repositories\estruturadedados\pilhas\dynamic_stack\main.c
 	<stdio.h>
 	<stdlib.h>
 	"Dynamic_Stack.h"
@@ -8,16 +8,17 @@
 	<stdbool.h>
 	<stdio.h>
 
-1692330490 source:c:\meusprojetos\github_repositories\estruturadedados\pilhas\dynamic_stack\doub_list.c
+1692391505 source:c:\meusprojetos\github_repositories\estruturadedados\pilhas\dynamic_stack\doub_list.c
 	<stdbool.h>
 	<stdio.h>
 	<stdlib.h>
 	"Doub_List.h"
 
-1692330490 c:\meusprojetos\github_repositories\estruturadedados\pilhas\dynamic_stack\doub_list.h
+1692391521 c:\meusprojetos\github_repositories\estruturadedados\pilhas\dynamic_stack\doub_list.h
 
-1692330490 source:c:\meusprojetos\github_repositories\estruturadedados\pilhas\dynamic_stack\dynamic_stack.c
+1692391282 source:c:\meusprojetos\github_repositories\estruturadedados\pilhas\dynamic_stack\dynamic_stack.c
 	"Dynamic_Stack.h"
 	"Doub_List.h"
 	<stdlib.h>
+	<stdio.h>
 

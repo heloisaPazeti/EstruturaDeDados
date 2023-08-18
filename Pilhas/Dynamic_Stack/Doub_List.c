@@ -62,24 +62,6 @@ void List_Destroy(List **L_ref)
     *L_ref = NULL;
 }
 
-void List_AddFirst(List *L, int val)
-{
-    Node *p = Node_Create(val);
-    p -> next = L -> begin;
-
-    if(List_IsEmpty(L))
-    {
-        L -> end = p;
-    }
-    else
-    {
-        L -> begin -> prev = p;
-    }
-
-    L -> begin = p;
-    L -> size++;
-}
-
 void List_AddLast(List *L, int val)
 {
     Node *p = Node_Create(val);
@@ -96,59 +78,6 @@ void List_AddLast(List *L, int val)
 
     L -> end = p;
     L -> size++;
-}
-
-void List_Remove(List *L, int val)
-{
-    if(!List_IsEmpty(L))
-    {
-        Node *p = L -> begin;
-
-        if(L -> begin -> val == val)    //IF IT'S FIRST ELEMENT
-        {
-            L -> begin = p -> next;
-
-            if(L -> end == p)   //IF THERE'S ONLY ONE ELEMENT
-            {
-                L-> end = NULL;
-            }
-            else    // IF THERE'S MORE ELEMENTS
-            {
-                L -> begin -> prev = NULL;
-            }
-
-            free(p);
-            L -> size--;
-        }
-        else //IF IT'S NOT THE FIRST ELEMENT
-        {
-            p = p -> next;
-
-            while(p != NULL)
-            {
-                if(p -> val == val) //P IT'S THE ELEMENT TO REMOVE
-                {
-                    p -> prev -> next = p -> next;
-                    if(L -> end == p) //IF IT'S AT THE END
-                    {
-                        L -> end = p -> prev;
-                    }
-                    else //IF IT'SS IN THE MIDDLE
-                    {
-                        p -> next -> prev = p -> prev;
-                    }
-
-                    free(p);
-                    p = NULL; //TO BE SURE THAT WHILE WILL STOP
-                    L -> size--;
-                }
-                else //P IT'S NOT THE RIGHT ELEMENT
-                {
-                    p = p -> next;
-                }
-            }
-        }
-    }
 }
 
 void List_RemoveLast(List *L)

@@ -5,8 +5,8 @@
 int main()
 {
     Stack *S = Stack_Create();
-    Stack_Print(S);
 
+    printf("PUSHING NEW NODES\n");
     Stack_Push(S, 2);
     Stack_Push(S, 3);
     Stack_Push(S, 4);
@@ -14,7 +14,6 @@ int main()
     Stack_Print(S);
 
     printf("\nPEEKING 0-0: %d\n", Stack_Peek(S));
-    Stack_Print(S);
 
     printf("\nPOPPING : %d\n", Stack_Pop(S));
     Stack_Print(S);
