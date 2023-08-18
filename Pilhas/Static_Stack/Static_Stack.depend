@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1692328719 source:c:\meusprojetos\github_repositories\estruturadedados\pilhas\static_stack\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Static_Stack.h"
+
+1692328314 c:\meusprojetos\github_repositories\estruturadedados\pilhas\static_stack\static_stack.h
+	<stdbool.h>
+
+1692328839 source:c:\meusprojetos\github_repositories\estruturadedados\pilhas\static_stack\static_stack.c
+	"Static_Stack.h"
+	<stdio.h>
+	<stdlib.h>
+
