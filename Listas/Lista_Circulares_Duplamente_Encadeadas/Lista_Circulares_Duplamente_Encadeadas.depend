@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1692325961 source:c:\meusprojetos\github_repositories\estruturadedados\listas\lista_circulares_duplamente_encadeadas\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Circ_List.h"
+
+1692325945 source:c:\meusprojetos\github_repositories\estruturadedados\listas\lista_circulares_duplamente_encadeadas\circ_list.c
+	"Circ_List.h"
+	<stdbool.h>
+	<stdio.h>
+
+1692325811 c:\meusprojetos\github_repositories\estruturadedados\listas\lista_circulares_duplamente_encadeadas\circ_list.h
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+
