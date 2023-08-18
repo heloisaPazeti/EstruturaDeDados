@@ -4,7 +4,6 @@
 
 - Listas Encadeadas Simples
 - Listas Duplamente Encadeadas
-- Listas Encadeadas Circulares
 - Listas Duplamente Circulares Encadeadas
 
 ##
