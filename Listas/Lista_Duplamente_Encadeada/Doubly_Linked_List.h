@@ -6,6 +6,7 @@ typedef struct _doubly_List List;
 
 Node *Node_Create(int val);
 List *List_Create();
+void List_Destroy(List **L_ref);
 
 void List_AddFirst(List *L, int val);
 void List_AddLast(List *L, int val);

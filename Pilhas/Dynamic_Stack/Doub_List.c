@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "Doubly_Linked_List.h"
+#include "Doub_List.h"
 
 //////////////////////////////////////////// STRUCTS
 
@@ -20,13 +20,6 @@ typedef struct _doubly_List
     int size;
 
 } List;
-
-//////////////////////////////////////////// MÉTODOS PRIVADOS
-
-bool List_IsEmpty(List *L)
-{
-    return (L -> size <= 0);
-}
 
 //////////////////////////////////////////// MÉTODOS DE ALTERAÇÃO
 
@@ -158,14 +151,56 @@ void List_Remove(List *L, int val)
     }
 }
 
+void List_RemoveLast(List *L)
+{
+    if(!List_IsEmpty(L))
+    {
+            Node *p = L -> end;
+
+            if(L -> begin == L -> end)
+            {
+                    L -> begin = L -> end = NULL;
+            }
+            else
+            {
+                    L -> end = L -> end -> prev;
+                    L -> end -> next = NULL;
+            }
+
+            free(p);
+            L -> size--;
+    }
+}
+
 //////////////////////////////////////////// HELPERS
 
-int List_GetSize(List *L)
+bool List_IsEmpty(const List *L)
+{
+    return (L -> size <= 0);
+}
+
+size_t List_Size(const List *L)
 {
     return L -> size;
 }
 
-void List_Print(List *L)
+int List_GetLastValue(const List *L)
+{
+    if(List_IsEmpty(L))
+    {
+            printf("A lista está vazia...");
+            exit(EXIT_FAILURE);
+    }
+
+    return L -> end -> val;
+}
+
+int List_GetSize(const List *L)
+{
+    return L -> size;
+}
+
+void List_Print(const List *L)
 {
     Node *p = L->begin;
 
