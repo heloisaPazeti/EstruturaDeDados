@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Doub_List_Queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Doub_List_Queue.h" />
+		<Unit filename="Dynamic_Queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Dynamic_Queue.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

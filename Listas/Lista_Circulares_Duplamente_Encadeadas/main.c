@@ -22,5 +22,7 @@ int main()
     CircList_Remove(L, 1);
     CircList_Print(L);
 
+    CircList_Destroy(&L);
+
     return 0;
 }

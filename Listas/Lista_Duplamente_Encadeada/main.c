@@ -21,5 +21,7 @@ int main()
     List_Remove(L, 10);
     List_Print(L);
 
+    List_Destroy(&L);
+
     return 0;
 }
