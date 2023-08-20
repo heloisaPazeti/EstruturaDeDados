@@ -17,4 +17,4 @@ Conjunto de lições aprendidas em Estrutura de Dados em C.
 ### Pilhas (Stacks)
 
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Pilhas/Static_Stack">Pilhas Estáticas</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Pilhas/Dynamic_Stack">Pilhas Dinnâmicas</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Pilhas/Dynamic_Stack">Pilhas Dinâmicas</a>
