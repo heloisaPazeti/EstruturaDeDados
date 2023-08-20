@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1692563780 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\arvores_binarias\binary_tree_v2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Binary_Tree.h"
+
+1692563514 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\arvores_binarias\binary_tree_v2\binary_tree.c
+	"Binary_Tree.h"
+
+1692563514 c:\meusprojetos\github_repositories\estruturadedados\arvores\arvores_binarias\binary_tree_v2\binary_tree.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
