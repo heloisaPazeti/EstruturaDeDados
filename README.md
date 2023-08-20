@@ -5,7 +5,7 @@ Conjunto de lições aprendidas em Estrutura de Dados em C.
 
 ### Listas
 
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/ListasSimples">Listas Encadeadas</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Encadeada_Simples">Listas Encadeadas</a>
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Duplamente_Encadeada">Listas Duplamente Encadeadas</a>
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Circulares_Duplamente_Encadeadas">Listas Circulares Duplamente Encadeadas</a>
 
