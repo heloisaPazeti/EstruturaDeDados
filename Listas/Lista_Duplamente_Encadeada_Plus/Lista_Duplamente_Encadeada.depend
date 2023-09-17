@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1692487800 source:c:\meusprojetos\github_repositories\estruturadedados\listas\lista_duplamente_encadeada\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Doubly_Linked_List.h"
+
+1692330003 c:\meusprojetos\github_repositories\estruturadedados\listas\lista_duplamente_encadeada\doubly_linked_list.h
+
+1692330005 source:c:\meusprojetos\github_repositories\estruturadedados\listas\lista_duplamente_encadeada\doubly_linked_list.c
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	"Doubly_Linked_List.h"
+
+1694898124 source:d:\semestre_02\est_dados\bibliotecas\lista_duplamente_encadeada\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Doubly_Linked_List.h"
+
+1694897656 d:\semestre_02\est_dados\bibliotecas\lista_duplamente_encadeada\doubly_linked_list.h
+	<stdbool.h>
+
+1694898100 source:d:\semestre_02\est_dados\bibliotecas\lista_duplamente_encadeada\doubly_linked_list.c
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Doubly_Linked_List.h"
+
