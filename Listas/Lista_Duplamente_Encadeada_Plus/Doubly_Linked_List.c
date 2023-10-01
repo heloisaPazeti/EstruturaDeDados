@@ -184,7 +184,7 @@ void List_Add_Position(List *L, TypeData val, int position, bool isBefore)
     }
     else
     {
-        printf("ESSA POSICAO NÃO EXISTE NA LISTA, TENTE NOVAMENTE.\n\n");
+        printf("ESSA POSICAO NAO EXISTE NA LISTA, TENTE NOVAMENTE.\n\n");
     }
 
 }

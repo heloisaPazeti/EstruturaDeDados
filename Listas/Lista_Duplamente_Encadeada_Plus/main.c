@@ -6,6 +6,8 @@
 #define commandSize 10
 
 void CreateMainMenu();
+void GetInsertValue(TypeData *sentence);
+void GetRemoveValue(TypeData *sentence);
 void GetValue(TypeData *sentence);
 int GetPosition();
 
@@ -54,42 +56,42 @@ void CreateMainMenu()
         }
         case 2:
         {
-            GetValue(&sentence);
+            GetInsertValue(&sentence);
             List_AddFirst(L, sentence);
             printf("\n\n");
             break;
         }
         case 3:
         {
-            GetValue(&sentence);
+            GetInsertValue(&sentence);
             List_AddLast(L, sentence);
             printf("\n\n");
             break;
         }
         case 4:
         {
-            GetValue(&sentence);
+            GetInsertValue(&sentence);
             List_AddBefore_Cursor(L, sentence);
             printf("\n\n");
             break;
         }
         case 5:
         {
-            GetValue(&sentence);
+            GetInsertValue(&sentence);
             List_AddAfter_Cursor(L, sentence);
             printf("\n\n");
             break;
         }
         case 6:
         {
-            GetValue(&sentence);
+            GetInsertValue(&sentence);
             List_Add_Position(L , sentence, GetPosition(), true);
             printf("\n\n");
             break;
         }
         case 7:
         {
-            GetValue(&sentence);
+            GetInsertValue(&sentence);
             List_Add_Position(L , sentence, GetPosition(), false);
             printf("\n\n");
             break;
@@ -121,7 +123,7 @@ void CreateMainMenu()
         }
         case 13:
         {
-            GetValue(&sentence);
+            GetRemoveValue(&sentence);
             List_Remove(L, sentence);
             printf("\n\n");
             break;
@@ -139,10 +141,21 @@ void CreateMainMenu()
     }
 }
 
+void GetInsertValue(TypeData *sentence)
+{
+    printf("VALOR PARA ADICIONAR:");
+    GetValue(sentence);
+}
+
+void GetRemoveValue(TypeData *sentence)
+{
+    printf("VALOR PARA REMOVER:");
+    GetValue(sentence);
+}
+
 void GetValue(TypeData *sentence)
 {
     char *ptr;
-    printf("VALOR PARA ADICIONAR:");
     fflush(stdin);
     fgets(*sentence, maxSize, stdin);
 
