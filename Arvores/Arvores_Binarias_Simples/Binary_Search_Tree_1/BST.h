@@ -15,8 +15,7 @@ typedef struct _node Node;
 ///////////////////////////////////// CREATE AND DESTROY
 
 Node* Tree_CreateNode(TypeData info);
-void Tree_Destroy(Node* node);
-bool Tree_RootDestroy(Node** root);
+bool Tree_Delete(Node* node);
 
 ///////////////////////////////////// INSERT
 

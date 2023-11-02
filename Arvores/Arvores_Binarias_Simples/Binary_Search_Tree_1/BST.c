@@ -28,29 +28,16 @@ Node* Tree_CreateNode(TypeData info)
     return leaf;
 }
 
-void Tree_Destroy(Node* node)
+bool Tree_Delete(Node* node)
 {
     if(node == NULL)
-        return;
+        return false;
 
-    printf("2\n\n");
-    /// RECURSION
-    Tree_Destroy(node -> left);
-    Tree_Destroy(node -> right);
+    Tree_Delete(node -> left);
+    Tree_Delete(node -> right);
 
     free(node);
     node = NULL;
-}
-
-bool Tree_RootDestroy(Node** root)
-{
-    if(root == NULL)
-        return false;
-
-    Tree_Destroy(*root);
-    printf("1\n\n");
-
-    free(root); ///ERROR
 
     return true;
 }

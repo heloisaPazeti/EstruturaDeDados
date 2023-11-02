@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1698615253 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\arvores_binarias_simples\binary_search_tree_1\main.c
+1698624287 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\arvores_binarias_simples\binary_search_tree_1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"BST.h"
 
-1698615230 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\arvores_binarias_simples\binary_search_tree_1\bst.c
+1698624349 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\arvores_binarias_simples\binary_search_tree_1\bst.c
 	"BST.h"
 
-1698615215 c:\meusprojetos\github_repositories\estruturadedados\arvores\arvores_binarias_simples\binary_search_tree_1\bst.h
+1698624270 c:\meusprojetos\github_repositories\estruturadedados\arvores\arvores_binarias_simples\binary_search_tree_1\bst.h
 	<stdio.h>
 	<stdlib.h>
 	<stdbool.h>

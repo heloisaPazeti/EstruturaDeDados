@@ -28,14 +28,8 @@ int main()
     Tree_Remove(&root, 0.25);
     Tree_PrintInOrder(root);
 
-    printf("\n\n -- DESTROYING TREE --\n\n");
-    Tree_RootDestroy(&root);
-
-    bool r = Tree_PrintInOrder(root);
-
-    if(!r)
-        printf("\nArvore Vazia...");
-
+    Tree_Delete(root);
+    root = NULL;
 
     return 0;
 }
