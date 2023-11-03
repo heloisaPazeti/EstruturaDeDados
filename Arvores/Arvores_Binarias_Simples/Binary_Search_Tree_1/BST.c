@@ -28,16 +28,28 @@ Node* Tree_CreateNode(TypeData info)
     return leaf;
 }
 
-bool Tree_Delete(Node* node)
+
+/// STILL DEVELOPING THESE TWO BAD BOYS
+
+void Tree_DeteleNode(Node* node)
 {
     if(node == NULL)
-        return false;
+        return;
 
-    Tree_Delete(node -> left);
-    Tree_Delete(node -> right);
+    Tree_DeteleNode(node -> left);
+    Tree_DeteleNode(node -> right);
 
     free(node);
     node = NULL;
+}
+
+bool Tree_Delete(Node** root)
+{
+    if(root == NULL)
+        return false;
+
+    Tree_DeteleNode(*root);
+    free(root);
 
     return true;
 }
@@ -90,6 +102,8 @@ bool Tree_Remove(Node** root, TypeData info)
 {
     if(root == NULL)
         return 0;
+
+    /// SEE IF WE CAN USE THE SEARCH METHOD TO IMPROVE
 
     Node *current = *root;
     Node *parent = NULL;
@@ -208,4 +222,80 @@ bool Tree_PrintPosOrder(Node *node)
 
     return true;
 }
+
+int Tree_Search(Node** root, TypeData value)
+{
+    if(root == NULL)
+        return 0;
+
+    Node* current = *root;
+
+    while(current != NULL)
+    {
+        if(value == current -> info)
+            return (current -> quant);
+
+        if(value > current -> info)
+            current = current -> right;
+        else
+            current = current -> left;
+    }
+
+    return 0;
+}
+
+void Tree_SearchPreOrder(Node** root, TypeData value, bool* found)
+{
+    if(root == NULL || *root == NULL)
+        return;
+
+    if(*found)
+        return;
+
+    if(*root != NULL)
+    {
+        if(value == (*root) -> info)
+        {
+            printf("\n\n >> HEY, HEY! LOOKED WHAT I FOUND, BOSS: %0.2f\n\n", (*root) -> info);
+            *found = true;
+        }
+
+        Tree_SearchPreOrder(&((*root) -> left), value, found);
+        Tree_SearchPreOrder(&((*root) -> right), value, found);
+    }
+}
+
 ///////////////////////////////////// HELPERS
+
+bool Tree_IsEmpty(Node** root)
+{
+    if(root == NULL || *root == NULL)
+        return true;
+
+    return false;
+}
+
+int Tree_TotalNodes(Node** root)
+{
+    if(root == NULL || *root == NULL)
+        return 0;
+
+    int leftH = Tree_TotalNodes(&((*root) -> left));
+    int rightH = Tree_TotalNodes(&((*root) -> right));
+
+    return (leftH + rightH + 1);
+}
+
+int Tree_Height(Node** root)
+{
+    if(root == NULL || *root == NULL)
+        return 0;
+
+    int leftH = Tree_Height(&((*root) -> left));
+    int rightH = Tree_Height(&((*root) -> right));
+
+    if(leftH > rightH)
+        return (leftH + 1);
+    else
+        return (rightH + 1);
+}

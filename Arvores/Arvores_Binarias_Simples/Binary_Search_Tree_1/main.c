@@ -9,6 +9,7 @@
 int main()
 {
     Node* root = Tree_Insert(0.25, NULL);
+
     Tree_Insert(0.1, root);
     Tree_Insert(0.6, root);
     Tree_Insert(0.9, root);
@@ -16,6 +17,9 @@ int main()
     Tree_Insert(1.2, root);
     Tree_Insert(0.8, root);
     Tree_Insert(0.3, root);
+
+    //bool f;
+    //Tree_SearchPreOrder(&root, 0.7, &f);
 
     printf(" -- PRINTING IN ORDER --\n\n");
     Tree_PrintInOrder(root);
@@ -28,8 +32,7 @@ int main()
     Tree_Remove(&root, 0.25);
     Tree_PrintInOrder(root);
 
-    Tree_Delete(root);
-    root = NULL;
+    //Tree_Delete(&root);
 
     return 0;
 }

@@ -15,7 +15,8 @@ typedef struct _node Node;
 ///////////////////////////////////// CREATE AND DESTROY
 
 Node* Tree_CreateNode(TypeData info);
-bool Tree_Delete(Node* node);
+void Tree_DeteleNode(Node* node);
+bool Tree_Delete(Node** root);
 
 ///////////////////////////////////// INSERT
 
@@ -31,7 +32,13 @@ Node* Tree_RemoveCurrent(Node* current);
 bool Tree_PrintInOrder(Node *node);
 bool Tree_PrintPreOrder(Node *node);
 bool Tree_PrintPosOrder(Node *node);
+int Tree_Search(Node** root, TypeData value);
+void Tree_SearchPreOrder(Node** root, TypeData value, bool* found);
 
 ///////////////////////////////////// HELPERS
+
+bool Tree_IsEmpty(Node** root);
+int Tree_TotalNodes(Node** root);
+int Tree_Height(Node** root);
 
 #endif // BST_H_INCLUDED
