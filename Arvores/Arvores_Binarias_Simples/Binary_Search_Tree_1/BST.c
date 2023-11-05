@@ -263,6 +263,48 @@ void Tree_SearchPreOrder(Node** root, TypeData value, bool* found)
         Tree_SearchPreOrder(&((*root) -> left), value, found);
         Tree_SearchPreOrder(&((*root) -> right), value, found);
     }
+
+    printf("\n>> VALUE NOT FOUND.");
+}
+
+Node* Tree_SeachChildOrParent(Node *root, int isParent, TypeData value)
+{
+    Node* current = root;
+    Node* parent = NULL;
+
+    if(current == NULL)
+        return NULL;
+
+    while(current != NULL)
+    {
+        if(value < current -> info)
+        {
+            parent = current;
+            current = current -> left;
+        }
+        else if(value == current -> info)
+            break;
+        else
+        {
+            parent = current;
+            current = current -> right;
+        }
+    }
+
+    if(current == NULL)
+    {
+        printf("\n>> VALUE NOT FOUND.");
+        return NULL;;
+    }
+
+    if(isParent)
+    {
+        printf("\n>PARENT'S [%0.2f] QUANT: %d", parent -> info ,parent  -> quant);
+        return parent;
+    }
+
+    printf("\n> [%.2f] QUANT: %d", current -> info, current  -> quant);
+    return current;
 }
 
 ///////////////////////////////////// HELPERS
@@ -298,4 +340,28 @@ int Tree_Height(Node** root)
         return (leftH + 1);
     else
         return (rightH + 1);
+}
+
+Node* Tree_FindMaxNode(Node* root, int isParent)
+{
+    Node* current = root;
+    Node* parent = NULL;
+
+    if(current == NULL)
+        return NULL;
+
+    while(current -> right != NULL)
+    {
+        parent = current;
+        current = current -> right;
+    }
+
+    if(isParent)
+    {
+        printf("\n>>MAX NODE PARENT [%.2f] QUANT: %d\n", parent -> info, parent -> quant);
+        return parent;
+    }
+
+    printf("\n>>MAX NODE [%.2f] QUANT: %d\n", current -> info, current -> quant);
+    return current;
 }

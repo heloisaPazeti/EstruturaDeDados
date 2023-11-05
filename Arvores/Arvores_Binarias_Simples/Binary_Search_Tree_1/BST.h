@@ -34,11 +34,13 @@ bool Tree_PrintPreOrder(Node *node);
 bool Tree_PrintPosOrder(Node *node);
 int Tree_Search(Node** root, TypeData value);
 void Tree_SearchPreOrder(Node** root, TypeData value, bool* found);
+Node* Tree_SeachChildOrParent(Node *root, int isParent, TypeData value);
 
 ///////////////////////////////////// HELPERS
 
 bool Tree_IsEmpty(Node** root);
 int Tree_TotalNodes(Node** root);
 int Tree_Height(Node** root);
+Node* Tree_FindMaxNode(Node* root, int isParent);
 
 #endif // BST_H_INCLUDED

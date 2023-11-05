@@ -2,55 +2,61 @@
 #include <stdlib.h>
 #include "BST.h"
 
+#define commandSize 5
 
-//void CreateMainMenu();
-//float GetInsertValue();
+Node* CreateTree();
+void CreateMainMenu();
+TypeData GetInsertValue();
 
 int main()
 {
-    Node* root = Tree_Insert(0.25, NULL);
+    /*
+    Node* root = Tree_Insert(10, NULL);
 
-    Tree_Insert(0.1, root);
-    Tree_Insert(0.6, root);
-    Tree_Insert(0.9, root);
-    Tree_Insert(1.2, root);
-    Tree_Insert(1.2, root);
-    Tree_Insert(0.8, root);
-    Tree_Insert(0.3, root);
+    Tree_Insert(1, root);
+    Tree_Insert(2, root);
+    Tree_Insert(3, root);
+    Tree_Insert(4, root);
+    Tree_Insert(5, root);
 
-    //bool f;
-    //Tree_SearchPreOrder(&root, 0.7, &f);
+    Tree_Remove(&root, 10);
 
-    printf(" -- PRINTING IN ORDER --\n\n");
     Tree_PrintInOrder(root);
 
-    printf("\n\n -- REMOVING NODE: 1.2 --\n\n");
-    Tree_Remove(&root, 1.2);
+    Tree_Insert(10, root);
     Tree_PrintInOrder(root);
+    */
 
-    printf("\n\n -- REMOVING ROOT --\n\n");
-    Tree_Remove(&root, 0.25);
-    Tree_PrintInOrder(root);
+    Node* root = CreateTree();
 
-    //Tree_Delete(&root);
+    while(1)
+        CreateMainMenu(&root);
+
 
     return 0;
 }
 
-/*
-void CreateMainMenu()
+Node* CreateTree()
+{
+    printf(">> ROOT INFO: ");
+    Node* root = Tree_Insert(GetInsertValue(), NULL);
+
+    return root;
+}
+
+void CreateMainMenu(Node** root)
 {
     char option[commandSize];
-    TypeData sentence;
 
     printf("-------------- CHOOSE ONE OF THE FOLLOWING OPTIONS ---------------------------------------\n\n");
-    printf("[0] EXIT                    [5] PRINT POS ORDER             [10] DESTROY\n");
-    printf("[1] INSERT IN TREE          [6] CONSULT TREE                [11] ...\n");
-    printf("[2] REMOVE VALUE            [7] GET HIGH                    [12] ...\n");
-    printf("[3] PRINT IN ORDER          [8] GET TOTAL LEAFS             [13] ...\n");
-    printf("[4] PRINT PRE ORDER         [9] FIND MAX NODES              [14] ...\n");
+    printf("[0] EXIT                    [5] PRINT POS ORDER                 [10] GET TOTAL LEAFS\n");
+    printf("[1] INSERT IN TREE          [6] CONSULT TREE                    [11] FIND MAX NODES\n");
+    printf("[2] REMOVE VALUE            [7] CONSULT TREE IN PRE ORDER       [12] ...\n");
+    printf("[3] PRINT IN ORDER          [8] CONSULT TREE CURRENT OR PARENT  [13] ...\n");
+    printf("[4] PRINT PRE ORDER         [9] GET HEIGHT                      [14] DESTROY\n");
     printf("------------------------------------------------------------------------------------------\n\n");
 
+    fflush(stdin);
     fgets(option, commandSize, stdin);
 
      switch(atoi(option))
@@ -61,57 +67,97 @@ void CreateMainMenu()
         }
         case 1:
         {
-            Tree_Insert(GetInsertValue(), root);
+            printf("\nADD INFO: ");
+            Tree_Insert(GetInsertValue(), *root);
             break;
         }
-        case 0:
+        case 2:
         {
+            printf("\nREMOVE INFO: ");
+            Tree_Remove(root, GetInsertValue());
+            Tree_PrintInOrder(*root);
             break;
         }
-        case 0:
+        case 3:
         {
+            Tree_PrintInOrder(*root);
             break;
         }
-        case 0:
+        case 4:
         {
+            Tree_PrintPreOrder(*root);
             break;
         }
-        case 0:
+        case 5:
         {
+            Tree_PrintPosOrder(*root);
             break;
         }
-        case 0:
+        case 6:
         {
+            printf("\nSEARCH FOR VALUE: ");
+            printf("\n>> CURRENT QUANT: %d\n", Tree_Search(root, GetInsertValue()));
             break;
         }
-        case 0:
+        case 7:
         {
+            bool b;
+            printf("\nSEARCH FOR VALUE: ");
+            Tree_SearchPreOrder(root, GetInsertValue(), &b);
             break;
         }
-        case 0:
+        case 8:
         {
+            TypeData f;
+            int b;
+
+            printf("\nSEARCH FOR VALUE: ");
+            f = GetInsertValue();
+            printf("LOOK FOR PARENT? [0 = FALSE / 1 = TRUE]: ");
+
+            fflush(stdin);
+            scanf("%d", &b);
+
+            Tree_SeachChildOrParent(*root, b, f);
             break;
         }
-        case 0:
+        case 9:
         {
+            printf("\n>> CURRENT TREE HEIGHT: %d\n\n", Tree_Height(root));
             break;
         }
-        case 0:
+        case 10:
         {
+            printf("\n>> CURRENT TOTAL NODES IN TREE: %d\n\n", Tree_TotalNodes(root));
+            break;
+        }
+        case 11:
+        {
+            int i;
+
+            printf("\n>> SEACH FOR MAX VALUE PARENT? [0 = FALSE / 1 = TRUE]: ");
+            fflush(stdin);
+            scanf("%d", &i);
+            Tree_FindMaxNode(*root, i);
+            break;
+        }
+        default:
+        {
+            printf("\n>> SORRY, THIS OPTIONS IS NOT AVAILABLE...\n\n");
             break;
         }
      }
+
+     printf("\n");
 }
 
-float GetInsertValue()
+TypeData GetInsertValue()
 {
-    float f;
-
-    printf("\n\nValor P/ Add: ");
+    TypeData f;
 
     fflush(stdin);
-    scanf("%.4f", &f);
-    printf("\n\n");
+    scanf(" %f", &f);
+    printf("\n");
 
     return f;
-}*/
+}
