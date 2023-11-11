@@ -22,6 +22,7 @@ void List_Destroy(List **L_ref);
 
 void List_AddFirst(List *L, TypeData val);
 void List_AddLast(List *L, TypeData val);
+void List_AddInOrder(List *L, TypeData val);
 
 //////////////////////////////////////////// ADD BEFORE /  AFTER CURSOR
 
@@ -43,6 +44,16 @@ void List_GoStart(List *L);
 void List_GoEnd(List *L);
 void List_GoPrev(List *L);
 void List_GoNext(List *L);
+
+//////////////////////////////////////////// SEARCH
+
+///Returns number of nodes until find data (pos)
+///Returns pos > 0 if found data  ; set cursor on value
+///Returns pos < 0 if haven't found data
+int List_SearchPos(List *L, TypeData val);
+
+///Returns node if found or NULL if not  ; set cursor on value  (if found)
+Node* List_SearchNode(List *L, TypeData val);
 
 //////////////////////////////////////////// HELPERS
 

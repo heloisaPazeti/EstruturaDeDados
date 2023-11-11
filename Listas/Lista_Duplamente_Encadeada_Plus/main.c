@@ -33,13 +33,13 @@ void CreateMainMenu()
     char option[commandSize];
     TypeData sentence;
 
-    printf("-------------- CHOOSE ONE OF THE FOLLOWING OPTIONS ---------------------------------------\n\n");
-    printf("[0] EXIT                    [5] INSERT AFTER CURSOR             [10] GO TO PREVIOUS\n");
-    printf("[1] PRINT LIST              [6] INSERT BEFORE POSITION          [11] GO TO NEXT\n");
-    printf("[2] INSERT AT BEGGINING     [7] INSERT AFTER POSITION           [12] REMOVE CURSOR\n");
-    printf("[3] INSERT AT END           [8] GO TO START                     [13] REMOVE VALUE\n");
-    printf("[4] INSERT BEFORE CURSOR    [9] GO TO END                       [14] DESTROY LIST\n");
-    printf("------------------------------------------------------------------------------------------\n\n");
+    printf("------------------------- CHOOSE ONE OF THE FOLLOWING OPTIONS -----------------------------------------------------\n\n");
+    printf("[0] EXIT                    [5] INSERT BEFORE CURSOR                [10] GO TO END                  [15]REMOVE CURSOR\n");
+    printf("[1] PRINT LIST              [6] INSERT AFTER CURSOR                 [11] GO TO PREVIOUS             [16]REMOVE VALUE\n");
+    printf("[2] INSERT AT BEGGINING     [7] INSERT BEFORE POSITION              [12] GO TO NEXT                 [17]DESTROY LIST\n");
+    printf("[3] INSERT AT END           [8] INSERT AFTER POSITION               [13] SEARCH FOR POSITION\n");
+    printf("[4] INSERT IN ORDER         [9] GO TO START                         [14] SEARCH FOR NODE\n");
+    printf("------------------------------------------------------------------------------------------------------------------\n\n");
 
     fgets(option, commandSize, stdin);
 
@@ -71,64 +71,94 @@ void CreateMainMenu()
         case 4:
         {
             GetInsertValue(&sentence);
-            List_AddBefore_Cursor(L, sentence);
+            List_AddInOrder(L, sentence);
             printf("\n\n");
             break;
         }
         case 5:
         {
             GetInsertValue(&sentence);
-            List_AddAfter_Cursor(L, sentence);
+            List_AddBefore_Cursor(L, sentence);
             printf("\n\n");
             break;
         }
         case 6:
         {
             GetInsertValue(&sentence);
-            List_Add_Position(L , sentence, GetPosition(), true);
+            List_AddAfter_Cursor(L, sentence);
             printf("\n\n");
             break;
         }
         case 7:
         {
             GetInsertValue(&sentence);
-            List_Add_Position(L , sentence, GetPosition(), false);
+            List_Add_Position(L , sentence, GetPosition(), true);
             printf("\n\n");
             break;
         }
         case 8:
         {
-            List_GoStart(L);
+            GetInsertValue(&sentence);
+            List_Add_Position(L , sentence, GetPosition(), false);
+            printf("\n\n");
             break;
         }
-         case 9:
+        case 9:
         {
-            List_GoEnd(L);
+            List_GoStart(L);
             break;
         }
          case 10:
         {
-            List_GoPrev(L);
+            List_GoEnd(L);
             break;
         }
          case 11:
         {
-            List_GoNext(L);
+            List_GoPrev(L);
             break;
         }
          case 12:
         {
+            List_GoNext(L);
+            break;
+        }
+         case 13:
+        {
+            printf(">> Type the word value you are looking for: ");
+            GetValue(&sentence);
+            int p = List_SearchPos(L, sentence);
+            if(p > 0)
+                printf("Here it is! The position of this Node is: %d\n", p);
+            else
+                printf("Sorry, couldn't found. Searched for %d nods\n", -p);
+            break;
+        }
+        case 14:
+        {
+            printf(">> Type the word value you are looking for: ");
+            GetValue(&sentence);
+            Node *p = List_SearchNode(L, sentence);
+
+            if(p != NULL)
+                printf("This value it's here.\n");
+            else
+                printf("Value not found.\n");
+            break;
+        }
+        case 15:
+        {
             List_RemoveCursor(L);
             break;
         }
-        case 13:
+        case 16:
         {
             GetRemoveValue(&sentence);
             List_Remove(L, sentence);
             printf("\n\n");
             break;
         }
-        case 14:
+        case 17:
         {
             List_Destroy(&L);
             break;
@@ -143,13 +173,13 @@ void CreateMainMenu()
 
 void GetInsertValue(TypeData *sentence)
 {
-    printf("VALOR PARA ADICIONAR:");
+    printf("VALOR PARA ADICIONAR: ");
     GetValue(sentence);
 }
 
 void GetRemoveValue(TypeData *sentence)
 {
-    printf("VALOR PARA REMOVER:");
+    printf("VALOR PARA REMOVER: ");
     GetValue(sentence);
 }
 
@@ -168,7 +198,7 @@ void GetValue(TypeData *sentence)
 int GetPosition()
 {
     char position[commandSize];
-    printf("POSICAO EM QUE ADICIONAR:");
+    printf("POSICAO EM QUE ADICIONAR: ");
     fflush(stdin);
     fgets(position, commandSize, stdin);
     printf("\n\n");

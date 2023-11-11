@@ -105,6 +105,41 @@ void List_AddLast(List *L, TypeData val)
     L -> size++;
 }
 
+void List_AddInOrder(List *L, TypeData val)
+{
+    if(L != NULL)
+    {
+        if(L -> cursor == NULL || List_IsEmpty(L))
+        {
+            List_AddFirst(L, val);
+        }
+        else
+        {
+            Node *current = L -> begin;
+
+            while(current != NULL)
+            {
+                L -> cursor = current;
+
+                if(strncmp(current -> val, val, maxSize) > 0)
+                {
+                    List_AddBefore_Cursor(L, val);
+                    return;
+                }
+                else if(current == L -> end)
+                {
+                    List_AddAfter_Cursor(L, val);
+                    return;
+                }
+
+                current = current -> next;
+            }
+        }
+    }
+    else
+        printf("\n\n>> EMPTY LIST IN ADD IN ORDER <<\n\n");
+}
+
 //////////////////////////////////////////// ADD BEFORE /  AFTER CURSOR
 
 void List_AddBefore_Cursor(List *L, TypeData val)
@@ -327,6 +362,54 @@ void List_GoNext(List *L)
 
     printf("\n");
     List_Print(L);
+}
+
+//////////////////////////////////////////// SEARCH
+
+int List_SearchPos(List *L, TypeData val)
+{
+    if(L == NULL)
+        return 0;
+
+    int pos = 1;
+    Node* current = L->begin;
+
+    while(current != NULL)
+    {
+        if(strncmp(val, current -> val, maxSize) == 0)
+        {
+            L -> cursor = current;
+            return pos;
+        }
+
+
+        current = current -> next;
+        pos++;
+    }
+
+    return (-1*pos);
+}
+
+Node* List_SearchNode(List *L, TypeData val)
+{
+    if(L == NULL)
+        return NULL;
+
+    Node* current = L->begin;
+
+    while(current != NULL)
+    {
+        if(strncmp(val, current -> val, maxSize) == 0)
+        {
+            L -> cursor = current;
+            return current;
+        }
+
+
+        current = current -> next;
+    }
+
+    return NULL;
 }
 
 //////////////////////////////////////////// HELPERS
