@@ -22,3 +22,6 @@ Conjunto de lições aprendidas em Estrutura de Dados em C.
 ### Árvores
 
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Arvores_Binarias_Simples">Árvores Binárias Simples</a>
+
+### Projetos que utilizam essas EDs
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Projetos%20Utilizando%20EDs/EditorTexto">Editor de Texto</a>
