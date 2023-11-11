@@ -28,3 +28,19 @@
 	<string.h>
 	"Doubly_Linked_List.h"
 
+1696125170 source:c:\meusprojetos\github_repositories\estruturadedados\listas\lista_duplamente_encadeada_plus\doubly_linked_list.c
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Doubly_Linked_List.h"
+
+1694897656 c:\meusprojetos\github_repositories\estruturadedados\listas\lista_duplamente_encadeada_plus\doubly_linked_list.h
+	<stdbool.h>
+
+1696125084 source:c:\meusprojetos\github_repositories\estruturadedados\listas\lista_duplamente_encadeada_plus\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Doubly_Linked_List.h"
+
