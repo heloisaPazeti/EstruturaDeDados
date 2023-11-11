@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="LDES" />
+		<Option makefile_is_custom="1" />
+		<Option execution_dir="../Atv1_EditorTexto_TadF" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/LDES" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="$make -f $makefile $EditorTexto.exe" />
+					<CompileFile command="$make -f $makefile $file" />
+					<Clean command="$make -f $makefile clean$target" />
+					<DistClean command="$make -f $makefile distclean$target" />
+					<AskRebuildNeeded command="$make -q -f $makefile $target" />
+					<SilentBuild command="$make -f $makefile $EditorTexto.exe &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/LDES" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="ListaDinEncad.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ListaDinEncad.h" />
+		<Unit filename="Makefile" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

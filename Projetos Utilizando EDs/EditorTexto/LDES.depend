@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1693744832 source:d:\semestre_02\est_dados\atividades\atv1_editortexto\listadinencad.c
+	<stdio.h>
+	<stdlib.h>
+	"ListaDinEncad.h"
+
+1693744832 d:\semestre_02\est_dados\atividades\atv1_editortexto\listadinencad.h
+
+1693744840 source:d:\semestre_02\est_dados\atividades\atv1_editortexto\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ListaDinEncad.h"
+
+1693939390 source:d:\semestre_02\est_dados\atividades\atv1_editortexto_tadf\listadinencad.c
+	<stdio.h>
+	<stdlib.h>
+	"ListaDinEncad.h"
+
+1693774812 d:\semestre_02\est_dados\atividades\atv1_editortexto_tadf\listadinencad.h
+	<string.h>
+
+1693775236 source:d:\semestre_02\est_dados\atividades\atv1_editortexto_tadf\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ListaDinEncad.h"
+
