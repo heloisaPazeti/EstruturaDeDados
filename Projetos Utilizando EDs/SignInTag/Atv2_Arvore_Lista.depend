@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1700068252 source:d:\semestre_02\est_dados\atividades\atv2_arvore_lista\binarytree.c
+	"BinaryTree.h"
+
+1699724116 d:\semestre_02\est_dados\atividades\atv2_arvore_lista\binarytree.h
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1699727116 source:d:\semestre_02\est_dados\atividades\atv2_arvore_lista\list.c
+	"List.h"
+
+1699580574 d:\semestre_02\est_dados\atividades\atv2_arvore_lista\list.h
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1699724116 source:d:\semestre_02\est_dados\atividades\atv2_arvore_lista\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BinaryTree.h"
+	"List.h"
+
