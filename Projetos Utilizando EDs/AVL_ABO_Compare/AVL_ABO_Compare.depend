@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1701193937 source:c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\avl_abo_compare\abo.c
+	<stdio.h>
+	<stdlib.h>
+	"ABO.h"
+
+1701196623 source:c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\avl_abo_compare\avl.c
+	<stdio.h>
+	<stdlib.h>
+	"AVL.h"
+
+1701195783 c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\avl_abo_compare\avl.h
+
+1701193732 source:c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\avl_abo_compare\rand48.c
+	<math.h>
+	<stdlib.h>
+
+1701196637 source:c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\avl_abo_compare\main.c
+	<stdio.h>
+	<stdlib.h>
+	"AVL.h"
+	"ABO.h"
+
+1701193852 c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\avl_abo_compare\abo.h
+
