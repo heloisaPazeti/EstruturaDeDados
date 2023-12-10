@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1700068252 source:d:\semestre_02\est_dados\atividades\atv2_arvore_lista\binarytree.c
+	"BinaryTree.h"
+
+1699724116 d:\semestre_02\est_dados\atividades\atv2_arvore_lista\binarytree.h
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1699727116 source:d:\semestre_02\est_dados\atividades\atv2_arvore_lista\list.c
+	"List.h"
+
+1699580574 d:\semestre_02\est_dados\atividades\atv2_arvore_lista\list.h
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1699724116 source:d:\semestre_02\est_dados\atividades\atv2_arvore_lista\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BinaryTree.h"
+	"List.h"
+
+1700068252 source:c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\signintag_avl\binarytree.c
+	"BinaryTree.h"
+
+1702213529 c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\signintag_avl\binarytree.h
+	<stdbool.h>
+	"infoStruct.h"
+
+1702213529 c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\signintag_avl\infostruct.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1702213977 source:c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\signintag_avl\main.c
+	<stdio.h>
+	<stdlib.h>
+	"BinaryTree.h"
+	"AVL.h"
+
+1702213692 c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\signintag_avl\avl.h
+	"infoStruct.h"
+
+1702214280 source:c:\meusprojetos\github_repositories\estruturadedados\projetos utilizando eds\signintag_avl\avl.c
+	"AVL.h"
+
