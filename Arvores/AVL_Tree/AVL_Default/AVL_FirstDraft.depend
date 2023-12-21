@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1702216311 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\avl_tree\avl_firstdraft\main.c
+	"AVL.h"
+
+1702219590 c:\meusprojetos\github_repositories\estruturadedados\arvores\avl_tree\avl_firstdraft\avl.h
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1702220899 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\avl_tree\avl_firstdraft\avl.c
+	"AVL.h"
+
