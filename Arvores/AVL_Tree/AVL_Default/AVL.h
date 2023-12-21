@@ -42,6 +42,7 @@ Node* RL_Rotate(Node* a);
 
 int GetHeight(Node* node);
 int Greater(int x, int y);
+void Print_InOrder(Node* root);
 
 
 #endif // AVL_H_INCLUDED

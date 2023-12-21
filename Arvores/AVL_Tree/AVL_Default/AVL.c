@@ -58,7 +58,7 @@ void Free_AVL(Node** root)
 
 Node* Insert_AVL(Node* root, TypeData info)
 {
-    if(root == NULL)
+    if(root == NULL) // CASE TREE IS EMPTY
         return (root = Create_Node(info));
     else if(strcmp(info, root -> info) < 0) //info < current -> info
         root -> left = Insert_AVL(root -> left, info);
@@ -116,8 +116,29 @@ Node* Remove_AVL(Node* root, TypeData info)
             root -> right = Remove_AVL(root -> right, temp -> info);
         }
     }
+    else if (strcmp(info, root -> info) < 0)
+        root -> left = Remove_AVL(root -> left, info);
+    else
+        root -> right = Remove_AVL(root -> right, info);
 
-    /// ELSE IF
+    root -> height = Greater(GetHeight(root -> left), GetHeight(root -> right)) +1;
+
+    if(GetHeight(root -> left) - GetHeight(root -> right) == 2)
+    {
+        if(GetHeight(root -> right -> right) >= GetHeight(root -> right -> left))
+            root = LL_Rotate(root);
+        else
+            root = RL_Rotate(root);
+    }
+    else if(GetHeight(root -> right) - GetHeight(root -> left) == 2)
+    {
+        if(GetHeight(root -> left -> left) >= GetHeight(root -> left -> right))
+            root = RR_Rotate(root);
+        else
+            root = LR_Rotate(root);
+    }
+
+    return root;
 }
 
 ///////////////////////////////////// ROTATE
@@ -174,4 +195,21 @@ int Greater(int x, int y)
         return x;
     else
         return y;
+}
+
+void Print_InOrder(Node* root)
+{
+    if(root != NULL)
+    {
+        Print_InOrder(root -> left);
+        printf("Info: '%s' || Height: %d\n", root -> info, root -> height);
+        if(root -> left != NULL)
+            printf("    - Left Child: '%s'\n", root -> left -> info);
+        if(root -> right != NULL)
+            printf("    - Right Child: '%s'\n", root -> right -> info);
+
+        printf("\n");
+
+        Print_InOrder(root -> right);
+    }
 }
