@@ -1,12 +1,14 @@
 # Estrutura De Dados
-Conjunto de lições aprendidas em Estrutura de Dados em C.
+
+Conjunto de Estruturas de dados em C e projetos / exemplos nos quais foram utilizadas.
 
 ## Contém
 
 ### Listas
 
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Encadeada_Simples">Listas Encadeadas</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Duplamente_Encadeada">Listas Duplamente Encadeadas</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Duplamente_Encadeada">Listas Duplamente Encadeada (Default)</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Duplamente_Encadeada_Plus">Listas Duplamente Encadeada (Extras)</a>
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Circulares_Duplamente_Encadeadas">Listas Circulares Duplamente Encadeadas</a>
 
 ### Filas (Queue)
@@ -22,6 +24,12 @@ Conjunto de lições aprendidas em Estrutura de Dados em C.
 ### Árvores
 
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Arvores_Binarias_Simples">Árvores Binárias Simples</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/AVL_Tree/AVL_Default">AVL Tree</a> [Em construção]
+- <a>Red - Black Tree</a> [Em construção]
+
+### Grafos [Em construção]
+
+##
 
 ### Projetos que utilizam essas EDs
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Projetos%20Utilizando%20EDs/EditorTexto">Editor de Texto</a>
