@@ -1,6 +1,6 @@
 # Estrutura De Dados
 
-Conjunto de Estruturas de dados em C e projetos / exemplos nos quais foram utilizadas.
+Set of C data structures and projects / examples in which they were used.
 
 ## Contém
 
