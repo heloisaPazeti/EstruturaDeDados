@@ -13,15 +13,6 @@ typedef struct _avl_node
 
 ///////////////////////////////////// CREATE AND DESTROY
 
-Node** Create_AVL()
-{
-    Node** root = (Node**) malloc(sizeof(Node*));
-    if(root != NULL)
-        *root = NULL;
-
-    return root;
-}
-
 Node* Create_Node(TypeData newInfo)
 {
     Node* node = (Node*)malloc(sizeof(Node));
@@ -181,6 +172,52 @@ Node* RL_Rotate(Node* c)
 
 ///////////////////////////////////// SEARCH
 
+Node* Search_AVL(Node* root, TypeData info)
+{
+    if(root == NULL)
+    {
+        printf(">> [SEARCH RESULT]: Value not Found. Null Root Exception.\n");
+        return NULL;
+    }
+
+    if(strcmp(info, root -> info) == 0) //if(info == root -> info)
+    {
+        printf(">> [Search Result]: Value %s Found!\n", root -> info);
+        printf("    Left Leaf: %s\n", root -> left -> info);
+        printf("    Right Leaf: %s\n\n", root -> right -> info);
+        return root;
+    }
+    else
+    {
+        Node* result = NULL;
+
+        if(strcmp(info, root -> info) > 0) // if(info > root -> info)
+            result = Search_AVL(root -> right, info);
+        else
+            result = Search_AVL(root -> left, info);
+
+        return result;
+    }
+}
+
+///////////////////////////////////// PRINTS
+
+void Print_InOrder(Node* root)
+{
+    if(root != NULL)
+    {
+        Print_InOrder(root -> left);
+        printf("Info: '%s' || Height: %d\n", root -> info, root -> height);
+        //if(root -> left != NULL)
+            printf("    - Left Child: '%s'\n", root -> left -> info);
+        //if(root -> right != NULL)
+            printf("    - Right Child: '%s'\n", root -> right -> info);
+
+        printf("\n");
+
+        Print_InOrder(root -> right);
+    }
+}
 
 ///////////////////////////////////// HELPERS
 
@@ -197,19 +234,13 @@ int Greater(int x, int y)
         return y;
 }
 
-void Print_InOrder(Node* root)
+int TotalNodes_AVL(Node* root)
 {
-    if(root != NULL)
-    {
-        Print_InOrder(root -> left);
-        printf("Info: '%s' || Height: %d\n", root -> info, root -> height);
-        if(root -> left != NULL)
-            printf("    - Left Child: '%s'\n", root -> left -> info);
-        if(root -> right != NULL)
-            printf("    - Right Child: '%s'\n", root -> right -> info);
+    if(root == NULL)
+        return 0;
 
-        printf("\n");
+    int left_height = TotalNodes_AVL(root -> left);
+    int right_height = TotalNodes_AVL(root -> right);
 
-        Print_InOrder(root -> right);
-    }
+    return (left_height + right_height + 1);
 }

@@ -10,14 +10,14 @@
 1702220899 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\avl_tree\avl_firstdraft\avl.c
 	"AVL.h"
 
-1703177397 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\avl_tree\avl_default\main.c
+1703425530 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\avl_tree\avl_default\main.c
 	"AVL.h"
 
-1703167949 c:\meusprojetos\github_repositories\estruturadedados\arvores\avl_tree\avl_default\avl.h
+1703425617 c:\meusprojetos\github_repositories\estruturadedados\arvores\avl_tree\avl_default\avl.h
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
 
-1703177395 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\avl_tree\avl_default\avl.c
+1703425617 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\avl_tree\avl_default\avl.c
 	"AVL.h"
 

@@ -15,7 +15,6 @@ typedef struct _avl_node Node;
 
 ///////////////////////////////////// CREATE AND DESTROY
 
-Node** Create_AVL();
 Node* Create_Node(TypeData newInfo);
 void Free_Node(Node* node);
 void Free_AVL(Node** root);
@@ -37,12 +36,16 @@ Node* RL_Rotate(Node* a);
 
 ///////////////////////////////////// SEARCH
 
+Node* Search_AVL(Node* root, TypeData info);
+
+///////////////////////////////////// PRINTS
+
+void Print_InOrder(Node* root);
 
 ///////////////////////////////////// HELPERS
 
 int GetHeight(Node* node);
 int Greater(int x, int y);
-void Print_InOrder(Node* root);
-
+int TotalNodes_AVL(Node* root);
 
 #endif // AVL_H_INCLUDED
