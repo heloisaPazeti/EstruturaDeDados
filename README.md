@@ -4,12 +4,12 @@ Set of C data structures and projects / examples in which they were used.
 
 ## Contém
 
-### Listas
+### Listas (Lists)
 
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Encadeada_Simples">Listas Encadeadas</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Duplamente_Encadeada">Listas Duplamente Encadeada (Default)</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Duplamente_Encadeada_Plus">Listas Duplamente Encadeada (Extras)</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Circulares_Duplamente_Encadeadas">Listas Circulares Duplamente Encadeadas</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Encadeada_Simples">Linked List</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Duplamente_Encadeada">Doubly Linked Lists (Default)</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Duplamente_Encadeada_Plus">Doubly Linked Lists (Extras)</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Circulares_Duplamente_Encadeadas">Doubly Linked Circular Lists</a>
 
 ### Filas (Queue)
 
@@ -21,11 +21,11 @@ Set of C data structures and projects / examples in which they were used.
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Pilhas/Static_Stack">Pilhas Estáticas</a>
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Pilhas/Dynamic_Stack">Pilhas Dinâmicas</a>
 
-### Árvores
+### Árvores (Trees)
 
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Arvores_Binarias_Simples">Árvores Binárias Simples</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/AVL_Tree/AVL_Default">AVL Tree</a>
-- <a>Red - Black Tree</a> [Em construção]
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Arvores_Binarias_Simples">BST</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/AVL_Tree/AVL_Default">AVL</a>
+- <a>Red - Black</a> [Em construção]
 
 ### Grafos [Em construção]
 
