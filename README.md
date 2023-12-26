@@ -24,7 +24,7 @@ Conjunto de Estruturas de dados em C e projetos / exemplos nos quais foram utili
 ### Árvores
 
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Arvores_Binarias_Simples">Árvores Binárias Simples</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/AVL_Tree/AVL_Default">AVL Tree</a> [Em construção]
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/AVL_Tree/AVL_Default">AVL Tree</a>
 - <a>Red - Black Tree</a> [Em construção]
 
 ### Grafos [Em construção]
@@ -33,3 +33,6 @@ Conjunto de Estruturas de dados em C e projetos / exemplos nos quais foram utili
 
 ### Projetos que utilizam essas EDs
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Projetos%20Utilizando%20EDs/EditorTexto">Editor de Texto</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Projetos%20Utilizando%20EDs/AVL_ABO_Compare">AVL & BST Compare</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Projetos%20Utilizando%20EDs/SignInTag_ABO">Add Tag - BST</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Projetos%20Utilizando%20EDs/SignInTag_AVL">Add Tag - AVL</a>
