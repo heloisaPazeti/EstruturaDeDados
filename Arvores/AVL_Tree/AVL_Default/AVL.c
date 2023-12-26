@@ -207,16 +207,40 @@ void Print_InOrder(Node* root)
     if(root != NULL)
     {
         Print_InOrder(root -> left);
-        printf("Info: '%s' || Height: %d\n", root -> info, root -> height);
-        //if(root -> left != NULL)
-            printf("    - Left Child: '%s'\n", root -> left -> info);
-        //if(root -> right != NULL)
-            printf("    - Right Child: '%s'\n", root -> right -> info);
-
-        printf("\n");
-
+        PrintNode(root);
         Print_InOrder(root -> right);
     }
+}
+
+void Print_PreOrder(Node* root)
+{
+    if(root != NULL)
+    {
+        PrintNode(root);
+
+        Print_PreOrder(root -> left);
+        Print_PreOrder(root -> right);
+    }
+}
+
+void Print_PosOrder(Node* root)
+{
+    if(root != NULL)
+    {
+        Print_PosOrder(root -> left);
+        Print_PosOrder(root -> right);
+
+        PrintNode(root);
+    }
+}
+
+void PrintNode(Node* node)
+{
+    printf("Info: '%s' || Height: %d\n", node -> info, node -> height);
+        printf("    - Left Child: '%s'\n", node -> left -> info);
+        printf("    - Right Child: '%s'\n", node -> right -> info);
+
+    printf("\n");
 }
 
 ///////////////////////////////////// HELPERS

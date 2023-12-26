@@ -82,6 +82,22 @@ void Start(Node* root)
         }
         case 5:
         {
+            printf("\n>> [PRINTING VALUES]\n\n");
+            Print_PreOrder(root);
+            printf("\nPress anything to continue...\n");
+            getchar();
+            break;
+        }
+        case 6:
+        {
+            printf("\n>> [PRINTING VALUES]\n\n");
+            Print_PosOrder(root);
+            printf("\nPress anything to continue...\n");
+            getchar();
+            break;
+        }
+        case 7:
+        {
             int total = TotalNodes_AVL(root);
             printf(">> [TOTAL NODES RESULT]: %d\n", total);
             printf("\nPress anything to continue...\n");
@@ -108,7 +124,9 @@ void PrintMenu()
      printf(" [2] - Remove\n");
      printf(" [3] - Search\n");
      printf(" [4] - Print In Order\n");
-     printf(" [5] - Total Nodes\n");
+     printf(" [5] - Print Pre Order\n");
+     printf(" [6] - Print Pos Order\n");
+     printf(" [7] - Total Nodes\n");
      printf("\n");
 }
 

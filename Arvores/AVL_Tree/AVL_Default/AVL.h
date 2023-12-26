@@ -41,6 +41,9 @@ Node* Search_AVL(Node* root, TypeData info);
 ///////////////////////////////////// PRINTS
 
 void Print_InOrder(Node* root);
+void Print_PreOrder(Node* root);
+void Print_PosOrder(Node* root);
+void PrintNode(Node* node);
 
 ///////////////////////////////////// HELPERS
 
