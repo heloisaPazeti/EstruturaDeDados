@@ -62,7 +62,7 @@ int main()
             printf("NA:%d NB:%d\n", totalNO_ArvBin(root), totalNO_ArvAVL(avl));
             break;
         }
-        case 1: ///ESSE AQUI TEM QUE REVER
+        case 1:
         {
             int avlPos, treePos;
 
