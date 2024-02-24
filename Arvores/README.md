@@ -5,3 +5,7 @@
 
 ### AVL
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/AVL_Tree/AVL_Default">AVL - Default</a>
+
+### Red - Black
+
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Red_Black_Tree">Red - Black</a>
