@@ -4,6 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #define maxSize 100
 
@@ -45,6 +46,8 @@ Tree* Insert_RB(Tree* tree, TypeData info);
 
 //////////////////////////////////// REMOVE
 
+Node* Remove(Tree* tree, TypeData info);
+
 //////////////////////////////////// ROTATE
 
 Node* RR_Rotate(Tree* tree, Node* a);
@@ -52,11 +55,27 @@ Node* LL_Rotate(Tree* tree, Node* a);
 
 //////////////////////////////////// SEARCH
 
+Node* Find_Node(Tree* tree, TypeData info);
+Node* Find_Successor(Node* node);
+Node* Find_Predecessor(Node* node);
+Node* Find_Substitute(Tree* tree, TypeData info);
+Node* Find_Uncle(Node* node);
+Node* Find_Sibling(Node* node);
+
 //////////////////////////////////// PRINTS
 
 void PrintNode(Node* node);
 void Print_InOrder(Node* root);
 
 //////////////////////////////////// HELPERS
+
+void Delete_Leaf(Node* node);
+void Swap_Colors(Node* a, Node* b);
+void Swap_Values(Node* a, Node* b);
+Node* Has_RedChildren(Node* node);
+Node* Has_AnyChildren(Node* node);
+bool IsOnLeft(Node* node);
+bool IsLeaf(Node* node);
+
 
 #endif // RED_BLACK_H_INCLUDED

@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1708654156 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\red_black_tree\main.c
+1708775376 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\red_black_tree\main.c
 	"red_black.h"
 
-1708654597 c:\meusprojetos\github_repositories\estruturadedados\arvores\red_black_tree\red_black.h
+1708811089 c:\meusprojetos\github_repositories\estruturadedados\arvores\red_black_tree\red_black.h
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
+	<stdbool.h>
 
-1708653884 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\red_black_tree\red_black.c
+1708775602 source:c:\meusprojetos\github_repositories\estruturadedados\arvores\red_black_tree\red_black.c
 	"red_black.h"
 
