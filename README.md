@@ -25,7 +25,7 @@ Set of C data structures and projects / examples in which they were used.
 
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Arvores_Binarias_Simples">BST</a>
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/AVL_Tree/AVL_Default">AVL</a>
-- <a>Red - Black</a> [Em construção]
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Red_Black_Tree">Red - Black</a>
 
 ### Grafos [Em construção]
 
