@@ -2,13 +2,24 @@
 
 ### Contains
 
-- Insertion;
-- Removal;
+- Insert;
+- Remove;
 - Search (Find Functions);
+- Print In, Pre and Pos Order;
+- Total Nodes Count;
 
 ### Insertion Cases
 
+<p align="center"><img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/insert_cases.png"></p>
+<p align="center">Same for opposing sides</p>
+
 ### Removal Cases
+
+<p align="center"><img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_SimpleCase.png"></p>
+<p align="center"><img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_SiblingBlack.png"></p>
+<p align="center"><img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_SiblingRed.png"></p>
+<p align="center"><img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_Root.png"></p>
+<p align="center">Same for opposing sides</p>
 
 ##
 ### <p align="center">Referências</p>
