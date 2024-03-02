@@ -164,7 +164,7 @@ Tree* Insert_RB(Tree* tree, TypeData info)
 
 //////////////////////////////////// REMOVE
 
-Node* Remove(Tree* tree, TypeData info)
+Node* Remove_RB(Tree* tree, TypeData info)
 {
     if(tree == NULL || tree -> root == NULL)
         return NULL;
@@ -176,81 +176,81 @@ Node* Remove(Tree* tree, TypeData info)
 
     Node* substitute = Find_Substitute(tree, toRemove -> info);
     toRemove -> info = substitute -> info;
-    Delete_Leaf(substitute);
 
     /////////////////////////
     //       CASES
     /////////////////////////
 
-
-    if((toRemove -> color == RED) && (IsLeaf(substitute)))      // TO REMOVE IS RED LEAF (HAS NO CHILDREN)
-        Delete_Leaf(substitute);
-    else if(toRemove -> color == BLACK)                         // TO REMOVE IS BLACK
+    if(toRemove -> color == BLACK)                              // TO REMOVE IS BLACK
     {
         Node* sibling = Find_Sibling(toRemove);
         if(sibling == NULL)                                     // TO REMOVE IS ROOT
         {
+            Node* child = Has_AnyChildren(toRemove);
+
             if(Has_RedChildren(toRemove) == NULL)
-                Has_AnyChildren(toRemove) -> color = RED;
+                child -> color = RED;
+            else
+            {
+                Has_AnyChildren(child) -> color = RED;
+                child -> color = BLACK;
+            }
+
         }
         else if(sibling -> color == BLACK)                      //SIBLING IS BLACK
         {
             Node* redChildren = Has_RedChildren(sibling);
-            if(redChildren != NULL)                            // AT LEAST ONE OF SIBLINGS CHILDREN IS RED
+            if(redChildren != NULL)                             // AT LEAST ONE OF SIBLINGS CHILDREN IS RED
             {
                 if((IsOnLeft(sibling)))
                 {
-                    if(IsOnLeft(redChildren)) // LL CASE
+                    if(IsOnLeft(redChildren))                   // LL CASE
                     {
                         RR_Rotate(tree, sibling -> parent);
-                        sibling -> left -> color = RED;
+                        sibling -> left -> color = BLACK;
                     }
-                    else // LR CASE
+                    else                                        // LR CASE
                     {
-                        Swap_Values(sibling, redChildren);
+                        LL_Rotate(tree, sibling);
                         redChildren -> color = BLACK;
-                        RR_Rotate(tree, sibling -> parent);
+                        RR_Rotate(tree, sibling -> parent -> parent);
                     }
                 }
                 else
                 {
-                    if(!IsOnLeft(redChildren))  // RR CASE
+                    if(!IsOnLeft(redChildren))                  // RR CASE
                     {
                         LL_Rotate(tree, sibling -> parent);
-                        sibling -> right -> color = RED;
+                        sibling -> right -> color = BLACK;
                     }
-                    else  // RL CASE
+                    else                                        // RL CASE
                     {
-                        Swap_Values(sibling, redChildren);
+                        RR_Rotate(tree, sibling);
                         redChildren -> color = BLACK;
-                        LL_Rotate(tree, sibling -> parent);
+                        LL_Rotate(tree, sibling -> parent -> parent);
                     }
                 }
             }
-            else                                          //BOTH CHILDREN ARE BLACK / NULL
-            {
-                if(Has_AnyChildren(toRemove))
-                    sibling -> color = RED;
-            }
-
-
+            else                                                //BOTH CHILDREN ARE BLACK / NULL
+                sibling -> color = RED;
         }
-        else                                              //SIBLING IS RED
+        else                                                    //SIBLING IS RED
         {
-            if(IsOnLeft(sibling)) // LEFT CASE
+            if(IsOnLeft(sibling))                               // LEFT CASE
             {
+                Swap_Colors(sibling, sibling -> right);
                 RR_Rotate(tree, sibling -> parent);
-                Swap_Colors(sibling -> parent, sibling -> parent -> left);
             }
-            else                  // RIGHT CASE
+            else                                                // RIGHT CASE
             {
+                Swap_Colors(sibling, sibling -> left);
                 LL_Rotate(tree, sibling -> parent);
-                Swap_Colors(sibling -> parent, sibling -> parent -> right);
             }
-
         }
     }
 
+    tree -> quant--;
+    Delete_Leaf(substitute);
     return NULL;
 }
 
@@ -274,7 +274,11 @@ Node* RR_Rotate(Tree* tree, Node* a)
             a -> parent -> right = b;
     }
     else
+    {
         tree -> root = b;
+        tree -> root -> color = BLACK;
+    }
+
 
     b -> right = a;
     a -> parent = b;
@@ -300,8 +304,10 @@ Node* LL_Rotate(Tree* tree, Node* a)
             a -> parent -> right = b;
     }
     else
+    {
         tree -> root = b;
-
+        tree -> root -> color = BLACK;
+    }
 
     b -> left = a;
     a -> parent = b;
@@ -414,6 +420,26 @@ void Print_InOrder(Node* root)
     }
 }
 
+void Print_PreOrder(Node* root)
+{
+    if(root != NULL)
+    {
+        PrintNode(root);
+        Print_InOrder(root -> left);
+        Print_InOrder(root -> right);
+    }
+}
+
+void Print_PosOrder(Node* root)
+{
+    if(root != NULL)
+    {
+        Print_InOrder(root -> left);
+        Print_InOrder(root -> right);
+        PrintNode(root);
+    }
+}
+
 void PrintNode(Node* node)
 {
     printf("Info: '%d'", node -> info);
@@ -489,3 +515,4 @@ Node* Has_AnyChildren(Node* node)
 
 bool IsOnLeft(Node* node) { return (node == node -> parent -> left);}
 bool IsLeaf(Node* node) {return (node -> right == NULL && node -> left == NULL);}
+void ShowTotalNodes(Tree* tree){ printf(">> TOTAL NODES IN TREE: %d\n\n", tree -> quant);}

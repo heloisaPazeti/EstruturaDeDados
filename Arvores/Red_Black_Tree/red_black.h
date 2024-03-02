@@ -46,7 +46,7 @@ Tree* Insert_RB(Tree* tree, TypeData info);
 
 //////////////////////////////////// REMOVE
 
-Node* Remove(Tree* tree, TypeData info);
+Node* Remove_RB(Tree* tree, TypeData info);
 
 //////////////////////////////////// ROTATE
 
@@ -66,6 +66,8 @@ Node* Find_Sibling(Node* node);
 
 void PrintNode(Node* node);
 void Print_InOrder(Node* root);
+void Print_PreOrder(Node* root);
+void Print_PosOrder(Node* root);
 
 //////////////////////////////////// HELPERS
 
@@ -76,6 +78,7 @@ Node* Has_RedChildren(Node* node);
 Node* Has_AnyChildren(Node* node);
 bool IsOnLeft(Node* node);
 bool IsLeaf(Node* node);
+void ShowTotalNodes(Tree* tree);
 
 
 #endif // RED_BLACK_H_INCLUDED
