@@ -15,10 +15,15 @@
 
 ### Removal Cases
 
-<p align="center"><img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_SimpleCase.png"></p>
-<p align="center"><img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_SiblingBlack.png"></p>
-<p align="center"><img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_SiblingRed.png"></p>
-<p align="center"><img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_Root.png"></p>
+<p align="center">
+  <img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_SimpleCase.png" width="450" height="550">
+  <img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_SiblingBlack.png" width="450" height="550">
+</p>
+
+<p align="center">
+  <img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_SiblingRed.png" width="450" height="550">
+  <img src="https://github.com/heloisaPazeti/EstruturaDeDados/blob/main/Arvores/Red_Black_Tree/ReadMe_Img/Remove_Root.png" width="450" height="550"></p>
+
 <p align="center">Same for opposing sides</p>
 
 ##
