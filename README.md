@@ -26,9 +26,15 @@ Set of C data structures and projects / examples in which they were used.
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Arvores_Binarias_Simples">BST</a>
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/AVL_Tree/AVL_Default">AVL</a>
 - <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Red_Black_Tree">Red - Black</a>
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores_Binarias">Arvore Binária</a>
 
-### Grafos [Em construção]
+### Grafo Binario
 
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Grafos">Grafo de Arquivos Binario</a>
+
+### Arquivos Binarios
+
+- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arquivos_Binarios">Manipulção Arquivos Binarios</a>
 ##
 
 ### Projetos que utilizam essas EDs
