@@ -1,44 +1,59 @@
-# Estrutura De Dados
+# Data Structures in C
 
-Set of C data structures and projects / examples in which they were used.
+A collection of **data structures and related programming exercises implemented in C** as part of my studies in Data Structures.
 
-## Contém
+The repository contains both implementations of fundamental data structures and small projects applying them to practical problems.
 
-### Listas (Lists)
+## Implemented Structures
 
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Encadeada_Simples">Linked List</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Duplamente_Encadeada">Doubly Linked Lists (Default)</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Duplamente_Encadeada_Plus">Doubly Linked Lists (Extras)</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Listas/Lista_Circulares_Duplamente_Encadeadas">Doubly Linked Circular Lists</a>
+### Lists
 
-### Filas (Queue)
+* Singly linked lists
+* Doubly linked lists
+* Circular doubly linked lists
 
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Filas/StaticQueue">Filas Estáticas</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Filas/DynamicQueue">Filas Dinâmicas</a>
+### Queues
 
-### Pilhas (Stacks)
+* Static queues
+* Dynamic queues
 
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Pilhas/Static_Stack">Pilhas Estáticas</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Pilhas/Dynamic_Stack">Pilhas Dinâmicas</a>
+### Stacks
 
-### Árvores (Trees)
+* Static stacks
+* Dynamic stacks
 
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Arvores_Binarias_Simples">BST</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/AVL_Tree/AVL_Default">AVL</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores/Red_Black_Tree">Red - Black</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arvores_Binarias">Arvore Binária</a>
+### Trees
 
-### Grafo Binario
+* Binary Search Trees (BST)
+* AVL Trees
+* Red-Black Trees
+* Binary Trees
 
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Grafos">Grafo de Arquivos Binario</a>
+### Graphs
 
-### Arquivos Binarios
+* Binary file graphs
 
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Arquivos_Binarios">Manipulção Arquivos Binarios</a>
-##
+### Binary Files
 
-### Projetos que utilizam essas EDs
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Projetos%20Utilizando%20EDs/EditorTexto">Editor de Texto</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Projetos%20Utilizando%20EDs/AVL_ABO_Compare">AVL & BST Compare</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Projetos%20Utilizando%20EDs/SignInTag_ABO">Add Tag - BST</a>
-- <a href="https://github.com/heloisaPazeti/EstruturaDeDados/tree/main/Projetos%20Utilizando%20EDs/SignInTag_AVL">Add Tag - AVL</a>
+* Binary file manipulation
+
+## Applied Projects
+
+The repository also contains projects using the implemented data structures, including:
+
+* Text editor
+* AVL vs BST comparison
+* Tag management using BST
+* Tag management using AVL
+
+## Technologies
+
+* C
+* Pointers
+* Dynamic memory allocation
+* File handling
+* Data structures and algorithms
+
+## Purpose
+
+This repository documents my implementation and practice of fundamental data structures in C, with an emphasis on understanding their internal organization rather than relying on library implementations.
